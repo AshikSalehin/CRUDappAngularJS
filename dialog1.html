@@ -1,0 +1,39 @@
+
+  <md-dialog>
+  <form ng-cloak>
+    <md-toolbar style="background-color: black;">
+      <div class="md-toolbar-tools">
+        <h2>Information List</h2>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" style="height:200px;overflow: auto;">
+        <div class="container" style="border: 1px solid black; margin: 25px;"><br>
+          <table class="table table-dark table-hover">
+            <thead style="font-size: 20px;">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 20px;">
+              <tr ng-repeat="item in eee track by $index">
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phn}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <button ng-click="hide()" class="btn btn-dark">
+        Hide
+      </button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
